@@ -11,12 +11,6 @@ def run_test(args):
     """
     Execute Using TestRunner
     """
-    print("args.t = {}".format(args.test))
-    print("args.n = {}".format(args.count))
-    print("args.p = {}".format(args.prog))
-    print("args.a = {}".format(args.a))
-    print("args.o = {}".format(args.o))
-
     # correct arguments and optionals
     args.a = correct_args(args.a)
     args.o = correct_args(args.o)
