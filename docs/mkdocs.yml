@@ -1,0 +1,8 @@
+site_name: blackbox
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - mkdocstrings
