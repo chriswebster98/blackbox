@@ -92,17 +92,13 @@ class TestRunner:
         start = time.time()
         self.write_to_status(self.status_fields)
         count = range(self.count)
-
-        #for test_runs in range(self.count): -> 130 sec
-        #    self.run_single_test()
         
         # parallelize using multithreading
         with concurrent.futures.ThreadPoolExecutor() as executor:
             future_runs = {executor.submit(self.run_single_test): num for num in count}
             for future in concurrent.futures.as_completed(future_runs):
                 pass
-
-    
+                
         end = time.time()
         print("completed in {}.".format(end - start))
     
